@@ -1,26 +1,15 @@
 package com.company.fleet;
 
-import com.company.properties.Driveable;
+import com.company.properties.GPSCoords;
 import com.company.properties.Localizable;
 
-public class Truck implements Driveable, Localizable {
-    @Override
-    public void run() {
+public class Truck extends Vehicle {
 
+    public Truck(String id, GPSCoords coords) {
+        super(id, coords);
     }
 
-    @Override
-    public String getDriverName() {
-        return null;
-    }
-
-    @Override
-    public Boolean isDriverPresent() {
-        return null;
-    }
-
-    @Override
-    public Double[] getGPSCoords() {
-        return new Double[0];
+    public Truck(String id) {
+        super(id);
     }
 }
